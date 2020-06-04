@@ -7,15 +7,34 @@ import clsx from 'clsx';
 
 import styles from './NotFound.module.scss';
 
-const Component = ({ className, children }) => (
+const Component = ({ className }) => (
   <div className={clsx(className, styles.root)}>
-    <h2>NotFound</h2>
-    {children}
+
+    <div className={'container ' + styles.container} >
+      <div className='row no-gutters'>
+
+        <div className={'col-sm-3 col-md-4 col-lg-6 ' + styles.imgBox}>
+          <img src='/images/broken-chocolate.jpg' alt="Broken chocolate" />
+        </div>
+
+        <div className='col-sm-9 col-md-8 col-lg-6 '>
+
+          <div className={styles.intro}>
+
+            <h5>Sorry, <br />
+            the page you&apos;re looking for <br />
+            was not found :(</h5>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
   </div>
 );
 
 Component.propTypes = {
-  children: PropTypes.node,
   className: PropTypes.string,
 };
 
