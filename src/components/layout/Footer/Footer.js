@@ -2,19 +2,15 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
 
-import styles from './MainLayout.module.scss';
-
-import { Header } from '../Header/Header';
-import { Footer } from '../Footer/Footer';
+import styles from './Footer.module.scss';
 
 // import { connect } from 'react-redux';
 // import { reduxSelector, reduxActionCreator } from '../../../redux/exampleRedux.js';
 
 const Component = ({ className, children }) => (
   <div className={clsx(className, styles.root)}>
-    <Header />
+    <p className="info">Copyright ©2020 All rights reserved</p>
     {children}
-    <Footer />
   </div>
 );
 
@@ -34,7 +30,7 @@ Component.propTypes = {
 // const Container = connect(mapStateToProps, mapDispatchToProps)(Component);
 
 export {
-  Component as MainLayout,
-  // Container as MainLayout,
-  Component as MainLayoutComponent,
+  Component as Footer,
+  // Container as Footer,
+  Component as FooterComponent,
 };

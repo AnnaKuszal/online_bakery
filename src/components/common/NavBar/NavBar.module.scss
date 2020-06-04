@@ -1,0 +1,170 @@
+@import '../../../styles/settings.scss';
+
+.root {
+  flex-grow: 1;
+
+  .title {
+    text-transform: none;
+    font-size: 1.9rem;
+    font-family: $font-second;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: $font-red;
+    padding: 0 8px;
+
+    &:hover {
+      background-color: $background-medium;
+      color: $font-light;
+    }
+  }
+
+  .menu {
+    position: absolute;
+    right: 20px;
+
+    .btn {
+      padding: 10px 15px;
+      font-family: $font-first;
+      font-size: 1rem;
+      letter-spacing: 1px;
+      color: $font-red;
+
+      text-align: center;
+      @include hover-animation;
+
+      &:hover {
+        background-color: $background-red;
+        color: $font-light;
+      }
+    }
+
+    i {
+      font-size: 1rem;
+      color: $font-red;
+      background-color: transparent;
+      width: 25px;
+      height: 25px;
+      line-height: 25px;
+
+      &:hover {
+        color: $font-light;
+      }
+    }
+  }
+
+  .mobileMenuBtn {
+    display: none;
+
+    .menuButton {
+      padding: 5px 5px;
+      color: $font-red;
+      border-radius: 3px;
+      outline: none;
+
+      &:hover {
+        background-color: $background-red;
+        color: $font-light;
+      }
+    }
+  }
+
+  .menuMobile {
+    display: none;
+  }
+
+}
+
+@media (max-width: 767px) {
+
+  .root {
+
+    .menu {
+      display: none;
+    }
+
+    .mobileMenuBtn {
+      display: block;
+      position: absolute;
+      right: 15px;
+    }
+
+    .menuMobile {
+      display: flex;
+      align-self: stretch;
+      width: 100%;
+      z-index: 999;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      visibility: hidden;
+
+      .visible {
+        visibility: visible;
+      }
+
+      .hidden {
+        visibility: hidden;
+      }
+
+      ul {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        background-color: $background-light;
+        border: 2px solid $border-red;
+
+        li {
+          list-style: none;
+          display: flex;
+          align-items: stretch;
+          width: 100%;
+        }
+      }
+
+      a {
+        color: $font-red;
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: 12px;
+        padding: 1rem;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        letter-spacing: 1px;
+        width: 100%;
+        justify-content: center;
+        background-color: $background-light;
+        border-top: none;
+        border-bottom: 1px solid $border-red;
+        border-left: 2px solid $border-red;
+        border-right: 2px solid $border-red;
+        @include hover-animation;
+
+        &:hover,
+        &.active {
+
+          background-color: $background-red;
+          color: $font-light;
+          border-color: $border-red;
+        }
+
+        &.active {
+          border-color: $border-red;
+        }
+      }
+
+      li:first-child .active {
+        border: none;
+      }
+
+      li:last-child {
+        border-bottom: 4px solid $border-red;
+      }
+
+    }
+
+  }
+
+}

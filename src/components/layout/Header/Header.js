@@ -2,15 +2,16 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
 
+import styles from './Header.module.scss';
+
+import { NavBar } from '../../common/NavBar/NavBar';
+
 // import { connect } from 'react-redux';
 // import { reduxSelector, reduxActionCreator } from '../../../redux/exampleRedux.js';
 
-import styles from './Header.module.scss';
-
-const Component = ({ className, children }) => (
+const Component = ({ className }) => (
   <div className={clsx(className, styles.root)}>
-    <h2>Header</h2>
-    {children}
+    <NavBar title='Make A Wish' />
   </div>
 );
 
@@ -28,7 +29,6 @@ Component.propTypes = {
 // });
 
 // const Container = connect(mapStateToProps, mapDispatchToProps)(Component);
-
 
 export {
   Component as Header,

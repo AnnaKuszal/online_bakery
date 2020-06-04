@@ -1,0 +1,15 @@
+@import '../../../styles/settings.scss';
+
+.root {
+  padding: 10px 15px;
+  background-color: $background-red;
+  color: $font-light;
+  font-family: $font-first;
+  font-size: 1rem;
+  margin-top: 20px;
+
+  p {
+    margin-bottom: 0;
+    font-size: 0.8rem;
+  }
+}
