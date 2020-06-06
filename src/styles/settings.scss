@@ -1,1 +1,26 @@
 $base-size: 12px;
+
+$font-first: 'Roboto Slab', serif;
+$font-second: 'Parisienne', cursive;
+
+$font-light: #ffffff;
+$font-dark: #000000;
+
+$font-red-light: #f74848;
+$font-red: #b30b0b;
+
+$border-red: #b30b0b;
+
+$background-light: #ffffff;
+$background-medium: #d88585;
+$background-red: #b30b0b;
+
+$product-photo-bg: #eed3d3;
+
+@mixin hover-animation($all: false, $color-time: 0.3s, $bg-color-time: 0.3s) {
+  @if ($all) {
+    transition: all 0.3s;
+  } @else {
+    transition: color $color-time, background-color $bg-color-time;
+  }
+}

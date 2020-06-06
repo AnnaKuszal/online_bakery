@@ -1,6 +1,17 @@
 @import "settings.scss";
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
 
 *, *::before, *::after {
   box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  color: $font-dark;
+  font-family: $font-first;
+  background-color: $background-medium;
+  font-size: 12px;
+  line-height: 1.7;
 }
