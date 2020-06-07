@@ -1,5 +1,248 @@
 @import '../../../styles/settings.scss';
 
-// .root {
+.root {
 
-// }
+  margin: 0 auto;
+  padding: 0;
+  height: 90vh;
+  width: 90%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+  font-size: 0.9rem;
+  background-color: $background-light;
+
+  .container {
+    width: 100%;
+    padding: 0;
+  }
+
+  .btn {
+    padding: 10px 15px;
+    font-family: $font-first;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    color: $font-light;
+    background-color: $background-medium;
+
+    text-align: center;
+    @include hover-animation;
+
+    &:hover {
+      background-color: $background-red;
+      color: $font-light;
+    }
+
+    i {
+      font-size: 1rem;
+      color: $font-light;
+      background-color: transparent;
+      width: 25px;
+      height: 25px;
+      line-height: 25px;
+    }
+  }
+
+  .imgBox {
+    height: 90vh;
+    width: 100%;
+    overflow: hidden;
+    padding: 30px;
+
+    .imgBg {
+      height: 70%;
+      width: 80%;
+      overflow: hidden;
+      margin: 0 auto 15px;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+  }
+
+  .imgRow {
+    height: 25%;
+    width: 80%;
+    margin: 0 auto;
+    overflow: hidden;
+
+    .imgSm {
+      width: 100%;
+      height: 100%;
+      padding: 0 5px;
+      overflow: hidden;
+
+      img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: 0.5s all;
+
+        &:hover {
+          transform: scale(1.4);
+        }
+      }
+    }
+  }
+
+  .intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    padding: 30px;
+    width: 100%;
+    height: 90vh;
+    color: $font-red;
+    background-color: $background-light;
+
+    .title {
+      font-family: $font-second;
+      font-size: 2.7rem;
+      line-height: 1.3;
+    }
+
+    .subtitle {
+      font-size: 0.9rem;
+      line-height: 1.2;
+    }
+
+    p {
+      margin: 0;
+    }
+
+    .textarea {
+      width: 100%;
+      height: 80px;
+      font-size: 0.7rem;
+      margin: 10px 0;
+    }
+
+    input[type="number"] {
+      width: 50px;
+      margin-left: 20px;
+    }
+
+    .instructions {
+      font-size: 0.8rem;
+      line-height: 1;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+
+  .root {
+
+    height: auto;
+    width: 95%;
+
+    .intro {
+
+      .title {
+        font-size: 0.9rem;
+        line-height: 1;
+      }
+
+    }
+
+  }
+
+}
+
+@media (max-width: 767px) {
+
+  .root {
+
+    height: auto;
+    width: 95%;
+
+    .intro {
+      height: 85vh;
+      padding: 20px;
+      padding-bottom: 20px;
+      width: 100%;
+
+      p {
+        margin: 0;
+        font-size: 0.8rem;
+      }
+
+      .title {
+        font-family: $font-second;
+        font-size: 2rem;
+        line-height: 1;
+      }
+
+      .subtitle {
+        font-size: 0.8rem;
+        line-height: 1.2;
+        font-weight: 600;
+      }
+
+      .instructions {
+        font-size: 0.8rem;
+        line-height: 1;
+      }
+    }
+
+    .imgBox {
+      height: 85vh;
+      width: 100%;
+    }
+
+    .imgRow {
+      height: 20%;
+    }
+
+  }
+
+}
+
+@media (max-width: 992px) {
+
+  .root {
+
+    .intro {
+
+      .title {
+      font-family: $font-second;
+      font-size: 2.2rem;
+      line-height: 0.8;
+      }
+
+    }
+
+    .imgRow {
+      height: 15%;
+    }
+
+  }
+
+}
+
+@media (max-width: 1024px) {
+
+  .root {
+
+    .intro {
+
+      .title {
+        font-size: 2.4rem;
+        line-height: 1;
+      }
+
+      .textarea {
+        margin: 15px 0;
+      }
+
+    }
+
+  }
+
+}
